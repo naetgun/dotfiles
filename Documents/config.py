@@ -58,8 +58,8 @@ keys = [
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
 
     # Brightness keys control
-    #Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-    #Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight -inc 5")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -dec 5")),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
