@@ -26,7 +26,7 @@ keys = [
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_right(), desc="Move window to the right"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "l", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
@@ -205,12 +205,12 @@ screens = [
                 #widget.TextBox("default config", name="default"),
                 #widget.TextBox("Arch", foreground="#d75f5f"),
                 widget.Systray(),
-                widget.Sep(
-                        linewidth = 1,
-                        padding = 10,
-                        foreground = colors[14],
-                        background = colors[14]
-                        ),
+                #widget.Sep(
+                #        linewidth = 1,
+                #        padding = 10,
+                #        foreground = colors[14],
+                #        background = colors[14]
+                #        ),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 #widget.QuickExit(),
                 widget.Sep(
@@ -271,8 +271,9 @@ wmname = "LG3D"
 
 cmd = [
         "setxkbmap latam",
-        "feh --bg-fill /wallpaper/directory",
+        "feh --bg-fill /home/naet/Downloads/wallhaven-1jdj3v_1920x1080.png",
         "picom &",
+        "cbatticon &",
 
 ]
 
